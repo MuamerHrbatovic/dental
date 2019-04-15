@@ -1,6 +1,20 @@
-@extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+@include('partials.head')
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="box_wrapper">
+
+
+
+    @include('partials.header')
 
     <section class="fullwidth">
         <div class="container">
@@ -14,7 +28,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -28,7 +42,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +56,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +127,6 @@
         </div>
     </section>
 
-    {{--
     <section id="testimonials_section" class="sc_parallax_gradient sc_parallax" data-parallax-speed="0.3" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
         <div class="sc_parallax_content">
             <div class="sc_parallax_overlay">
@@ -194,7 +207,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="team_section" class="">
         <div class="container">
@@ -371,7 +383,6 @@
             </div>
         </div>
     </section>
-    --}}
 
     <section id="contact_form_section" class="sc_parallax_gradient sc_parallax" data-parallax-speed="0.3" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
         <div class="sc_parallax_content">
@@ -416,8 +427,6 @@
         </div>
     </section>
 
-    {{--
-
     <section id="map_section" class="">
         <div class="row text-center">
             <div class="col-sm-12">
@@ -425,7 +434,13 @@
             </div>
         </div>
     </section>
+    @include('partials.footer')
 
-    --}}
-@endsection
+</div><!-- eof #box_wrapper -->
 
+<div class="preloader">
+    <div class="preloader_image"></div>
+</div>
+@include('partials.scripts')
+</body>
+</html>

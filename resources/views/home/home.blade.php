@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <section class="fullwidth">
         <div class="container">
             <div class="flexslider">
@@ -14,7 +13,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -28,7 +27,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +41,7 @@
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +112,6 @@
         </div>
     </section>
 
-    {{--
     <section id="testimonials_section" class="sc_parallax_gradient sc_parallax" data-parallax-speed="0.3" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
         <div class="sc_parallax_content">
             <div class="sc_parallax_overlay">
@@ -195,7 +193,7 @@
         </div>
     </section>
 
-
+    {{--
     <section id="team_section" class="">
         <div class="container">
             <div class="row">
@@ -291,7 +289,9 @@
             </div>
         </div>
     </section>
+    --}}
 
+    {{--
     <section id="gallery_section" class="light_section">
         <div class="container">
             <div class="row">
