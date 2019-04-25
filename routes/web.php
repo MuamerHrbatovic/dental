@@ -18,3 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group([
+    'middleware' => 'admin',
+    'prefix' => 'admin',
+    'namespace' => 'Admin'
+], function () {
+    Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+    Route::get('/icons', 'AdminController@icons')->name('icons');
+    Route::get('/appointment', 'AppointmentController@index')->name('appointments');
+    Route::get('/user', 'UserController@index')->name('users');
+    Route::get('/user/{user}', 'UserController@show')->name('user');
+});

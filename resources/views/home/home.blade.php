@@ -3,6 +3,10 @@
 @section('content')
     <section class="fullwidth">
         <div class="container">
+
+            @if ($errors->has('error'))
+                <div class="error">{{ $errors->first('error') }}</div>
+            @endif
             <div class="flexslider">
                 <ul class="slides">
                     <li>
