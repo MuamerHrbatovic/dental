@@ -8,7 +8,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#pablo">
+            <a class="navbar-brand" href="#">
                 @if(request()->is('admin/dashboard'))
                     Dashboard
                 @elseif(request()->is('admin/user') || request()->is('admin/user/*'))
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
+                    <a class="nav-link" href="#">
                         <i class="now-ui-icons users_single-02"></i>
 
                         <p>

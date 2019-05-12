@@ -37,4 +37,19 @@ class UserController extends Controller
     {
         return view('/admin/user/single');
     }
+
+    /**
+     * @param User $user
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function destroy(User $user){
+        try {
+            $user->delete();
+        } catch (\Exception $e) {
+        }
+
+        $users = User::all();
+
+        return view('/admin/user/index', compact('users'));
+    }
 }

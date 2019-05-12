@@ -27,6 +27,7 @@ Route::group([
     Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
     Route::get('/icons', 'AdminController@icons')->name('icons');
     Route::get('/appointment', 'AppointmentController@index')->name('appointments');
+    Route::resource('user', 'UserController');
     Route::get('/user', 'UserController@index')->name('users');
     Route::get('/user/{user}', 'UserController@show')->name('user');
 });

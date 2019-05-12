@@ -25,9 +25,9 @@
                                 <th>
                                     Status
                                 </th>
-                                <th class="text-right">
+                                <!-- <th class="text-right">
                                     Actions
-                                </th>
+                                </th>-->
                                 </thead>
                                 <tbody>
                                 @foreach($users as $user)
@@ -44,14 +44,20 @@
                                     <td>
                                         {{ $user->is_admin ? 'Admin' : 'User' }}
                                     </td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
+                                    <!-- <td class="td-actions text-right">
+
+                                         <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
                                             <i class="now-ui-icons ui-2_settings-90"></i>
                                         </button>
-                                        <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
-                                            <i class="now-ui-icons ui-1_simple-remove"></i>
-                                        </button>
+
+                                         <a href="">
+                                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove">
+                                                <i class="now-ui-icons ui-1_simple-remove"></i>
+                                            </button>
+                                        </a>
+
                                     </td>
+                                    -->
                                 </tr>
                                 @endforeach
                                 </tbody>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Appointment;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -24,7 +26,9 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        return view('/admin/dashboard');
+        $appointments= Appointment::all();
+        $users = User::all();
+        return view('/admin/dashboard', compact('users', 'appointments'));
     }
 
     public function icons(){

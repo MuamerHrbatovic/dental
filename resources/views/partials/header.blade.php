@@ -120,7 +120,7 @@
 
                                     @auth
                                         <li class="menu-item-type-custom">
-                                            <a href="{{ url('/home') }}">Home</a>
+                                            <a href="{{ route('home') }}">home</a>
                                         </li>
                                     @else
                                         <li class="menu-item-type-custom">
