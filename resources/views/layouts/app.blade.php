@@ -1,30 +1,66 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-@include('partials.head')
-<body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<html lang="en">
 
-<div id="box_wrapper">
+<head>
+    @include('partials.head')
+</head>
 
+<body class="page-header-fixed">
+    <div class="page-header navbar navbar-fixed-top">
+        @include('partials.header')
+    </div>
 
+    <div class="clearfix"></div>
 
-    @include('partials.header')
+    <div class="page-container">
+        <div class="page-sidebar-wrapper">
+            @include('partials.sidebar')
+        </div>
 
-    @yield('content')
+        <div class="page-content-wrapper">
+            <div class="page-content">
 
-    @include('partials.footer')
+                @if(isset($siteTitle))
+                    <h3 class="page-title">
+                        {{ $siteTitle }}
+                    </h3>
+                @endif
 
-</div><!-- eof #box_wrapper -->
+                <div class="row">
+                    <div class="col-md-12">
 
-<div class="preloader">
-    <div class="preloader_image"></div>
-</div>
-@include('partials.scripts')
+                        @if (Session::has('message'))
+                            <div class="note note-info">
+                                <p>{{ Session::get('message') }}</p>
+                            </div>
+                        @endif
+                        @if ($errors->count() > 0)
+                            <div class="note note-danger">
+                                <ul class="list-unstyled">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        @yield('content')
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-to-top"
+         style="display: none;">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+
+    {!! Form::open(['route' => 'auth.logout', 'style' => 'display:none;', 'id' => 'logout']) !!}
+        <button type="submit">Logout</button>
+    {!! Form::close() !!}
+
+    @include('partials.javascripts')
 </body>
 </html>

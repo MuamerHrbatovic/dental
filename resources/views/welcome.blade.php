@@ -1,48 +1,51 @@
-@extends('layouts.app')
+@extends('layouts.appv2')
 
 @section('content')
-
     <section class="fullwidth">
         <div class="container">
+
+            @if ($errors->has('error'))
+                <div class="error">{{ $errors->first('error') }}</div>
+            @endif
             <div class="flexslider">
                 <ul class="slides">
                     <li>
-                        <img src="images/slide-1.jpg" alt=""/>
+                        <img src="/fe/images/slide-1.jpg" alt=""/>
                         <div class="slide_description_wrapper">
                             <div class="container">
                                 <div class="slide_description">
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/slide-2.jpg" alt=""/>
+                        <img src="/fe/images/slide-2.jpg" alt=""/>
                         <div class="slide_description_wrapper">
                             <div class="container">
                                 <div class="slide_description">
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/slide-3.jpg" alt=""/>
+                        <img src="/fe/images/slide-3.jpg" alt=""/>
                         <div class="slide_description_wrapper">
                             <div class="container">
                                 <div class="slide_description">
                                     <div>
                                         <h1 class="slide_title">The best in modern<br>dentistry</h1>
 
-                                        <a class="btn btn-default btn-lg slide_button" href="">Make an Appointment</a>
+                                        <a class="btn btn-default btn-lg slide_button" href="appointment.html">Make an Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +116,6 @@
         </div>
     </section>
 
-    {{--
     <section id="testimonials_section" class="sc_parallax_gradient sc_parallax" data-parallax-speed="0.3" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
         <div class="sc_parallax_content">
             <div class="sc_parallax_overlay">
@@ -195,7 +197,7 @@
         </div>
     </section>
 
-
+    {{--
     <section id="team_section" class="">
         <div class="container">
             <div class="row">
@@ -208,7 +210,7 @@
                     <div class="sc_team_item sc_team_item_style_1">
                         <div class="sc_team_item_avatar"><img class="sc_image sc_image_shape_round" width="80"
                                                               height="80" alt="dr-joseph-phillips.jpg"
-                                                              src="images/dr-joseph-phillips-400x400.jpg">
+                                                              src="/fe/images/dr-joseph-phillips-400x400.jpg">
                         </div>
                         <div class="team_item_info-container">
                             <div class="sc_team_item_info"><h5 class="sc_team_item_title"><a
@@ -236,7 +238,7 @@
                     <div class="sc_team_item sc_team_item_style_1">
                         <div class="sc_team_item_avatar"><img class="sc_image sc_image_shape_round" width="80"
                                                               height="80" alt=""
-                                                              src="images/team_1_11-80x80.jpg">
+                                                              src="/fe/images/team_1_11-80x80.jpg">
                         </div>
                         <div class="team_item_info-container">
                             <div class="sc_team_item_info"><h5 class="sc_team_item_title"><a
@@ -264,7 +266,7 @@
                     <div class="sc_team_item sc_team_item_style_1">
                         <div class="sc_team_item_avatar"><img class="sc_image sc_image_shape_round" width="80"
                                                               height="80" alt="dr-joseph-phillips.jpg"
-                                                              src="images/dr-edward-grey-80x80.jpg">
+                                                              src="/fe/images/dr-edward-grey-80x80.jpg">
                         </div>
                         <div class="team_item_info-container">
                             <div class="sc_team_item_info"><h5 class="sc_team_item_title"><a
@@ -291,7 +293,9 @@
             </div>
         </div>
     </section>
+    --}}
 
+    {{--
     <section id="gallery_section" class="light_section">
         <div class="container">
             <div class="row">
@@ -304,7 +308,7 @@
                     <div class="post_item post_item_square">
                         <div class="post_content ih-item circle effect1 top_to_bottom">
                             <div class="post_featured img">
-                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="images/Depositphotos_5724724_original-400x400.jpg">						</div>
+                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="/fe/images/Depositphotos_5724724_original-400x400.jpg">						</div>
                             <div class="post_info_wrap info">
                                 <div class="info-back">
                                     <h4 class="post_title">Digital Dentistry</h4>
@@ -321,7 +325,7 @@
                     <div class="post_item post_item_square">
                         <div class="post_content ih-item circle effect1 top_to_bottom">
                             <div class="post_featured img">
-                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="images/Depositphotos_9410241_original-250x250.jpg">						</div>
+                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="/fe/images/Depositphotos_9410241_original-250x250.jpg">						</div>
                             <div class="post_info_wrap info">
                                 <div class="info-back">
                                     <h4 class="post_title">Digital Dentistry</h4>
@@ -338,7 +342,7 @@
                     <div class="post_item post_item_square">
                         <div class="post_content ih-item circle effect1 top_to_bottom">
                             <div class="post_featured img">
-                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="images/bigstock-profile-of-male-geek-smiling-w-35555741-250x250.jpg">						</div>
+                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="/fe/images/bigstock-profile-of-male-geek-smiling-w-35555741-250x250.jpg">						</div>
                             <div class="post_info_wrap info">
                                 <div class="info-back">
                                     <h4 class="post_title">Digital Dentistry</h4>
@@ -355,7 +359,7 @@
                     <div class="post_item post_item_square">
                         <div class="post_content ih-item circle effect1 top_to_bottom">
                             <div class="post_featured img">
-                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="images/additional_post_1-250x250.jpg">						</div>
+                                <img class="wp-post-image" width="250" height="250" alt="Digital Dentistry" src="/fe/images/additional_post_1-250x250.jpg">						</div>
                             <div class="post_info_wrap info">
                                 <div class="info-back">
                                     <h4 class="post_title">Digital Dentistry</h4>

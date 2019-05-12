@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Appointment;
+use App\Client;
+use App\Http\Requests;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,10 +23,12 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+        $users = Client::all();
+        $appointments = Appointment::all();
+        return view('home',compact('users','appointments'));
     }
 }
